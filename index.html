@@ -250,6 +250,17 @@
             { name: "Fortnite V-Bucks", platform: "Epic", price: "$8.99", image: "https://images.unsplash.com/photo-1589241062272-c0a000072dfa?q=80&w=400" }
         ];
 
+        function openModal(gameName) {
+            document.getElementById('gameSelectedTitle').textContent = gameName;
+            document.getElementById('responsibilityModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('responsibilityModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
         function changeLanguage(code) {
             const lang = languages.find(l => l.code === code);
             document.getElementById('currentLang').textContent = lang.name;
@@ -301,33 +312,6 @@
             });
         }
         window.onload = init;
-        
-           <a id="amirdigital011" 
-   href="https://m.me/amirdigital011"
-   target="_blank"
-   class="mt-6 w-full block text-center py-3 bg-blue-600 text-white font-bold rounded-lg">
-   Message Us on Messenger
-</a>
-
-        function openModal(gameName) {
-    document.getElementById('gameSelectedTitle').textContent = gameName;
-    document.getElementById('responsibilityModal').style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-
-    // Update Messenger link with selected game
-    const message = "Hello, I want to buy: " + gameName;
-    const encodedMessage = encodeURIComponent(message);
-
-    document.getElementById('amirdigital011').href =
-        "https://m.me/amirdigital011?text=" + encodedMessage;
-}
-
-       
-function closeModal() {
-    document.getElementById('responsibilityModal').style.display = 'none';
-    document.body.style.overflow = 'auto';
-}
-
     </script>
     <!-- Responsibility Modal -->
 <div id="responsibilityModal" class="fixed inset-0 z-[100] items-center justify-center p-4" style="display: none;">
@@ -360,5 +344,15 @@ function closeModal() {
         </button>
     </div>
 </div>
+function openModal(gameName) {
+    document.getElementById('gameSelectedTitle').textContent = gameName;
+    document.getElementById('responsibilityModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    document.getElementById('responsibilityModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
 </body>
 </html>
