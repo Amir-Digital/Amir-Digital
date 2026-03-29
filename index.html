@@ -312,6 +312,16 @@
             });
         }
         window.onload = init;
+        function openModal(gameName) {
+    document.getElementById('gameSelectedTitle').textContent = gameName;
+    document.getElementById('responsibilityModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    document.getElementById('responsibilityModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
     </script>
     <!-- Responsibility Modal -->
 <div id="responsibilityModal" class="fixed inset-0 z-[100] items-center justify-center p-4" style="display: none;">
@@ -344,15 +354,5 @@
         </button>
     </div>
 </div>
-function openModal(gameName) {
-    document.getElementById('gameSelectedTitle').textContent = gameName;
-    document.getElementById('responsibilityModal').style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-    document.getElementById('responsibilityModal').style.display = 'none';
-    document.body.style.overflow = 'auto';
-}
 </body>
 </html>
