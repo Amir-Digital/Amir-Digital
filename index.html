@@ -250,17 +250,6 @@
             { name: "Fortnite V-Bucks", platform: "Epic", price: "$8.99", image: "https://images.unsplash.com/photo-1589241062272-c0a000072dfa?q=80&w=400" }
         ];
 
-        function openModal(gameName) {
-            document.getElementById('gameSelectedTitle').textContent = gameName;
-            document.getElementById('responsibilityModal').style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            document.getElementById('responsibilityModal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
         function changeLanguage(code) {
             const lang = languages.find(l => l.code === code);
             document.getElementById('currentLang').textContent = lang.name;
